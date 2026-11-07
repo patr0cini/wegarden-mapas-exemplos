@@ -1,0 +1,281 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<style>
+#wgm{--bg:#FCFDFA; --erva:#EDF2E0; --ink:#23261E; --muted:#5A5B5D; --line:#d9dfcb;
+  --verde:#91B03E; --verde-escuro:#3d5c12; --noite:#2c430b; --on-noite:#FCFDFA; --on-noite-2:#d6e6a8;
+  --card:#ffffff; --note-bg:#fff6dc; --note-line:#c99a1a; --note-ink:#5b4300; --ph:#fde7a6;
+  --logo-ink:#514e4f;
+  --f-display:'Jost','Century Gothic','Trebuchet MS',sans-serif;
+  --f-body:'Source Sans 3','Trebuchet MS',system-ui,sans-serif;}
+#wgm{background:var(--bg); color:var(--ink); font:400 17px/1.55 var(--f-body)}
+#wgm .wrap{max-width:1160px; margin:0 auto; padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px))}
+#wgm h1,#wgm h2,#wgm h3{font-family:var(--f-display); font-weight:500; text-wrap:balance; margin:0; letter-spacing:-.005em}
+#wgm h1{font-size:clamp(36px, 5.2vw, 60px); line-height:1.04}
+#wgm h2{font-size:clamp(28px, 3.4vw, 40px); line-height:1.1}
+#wgm h3{font-size:22px; line-height:1.2}
+#wgm p{margin:0}
+#wgm a{color:var(--verde-escuro)}
+#wgm .eyebrow{font-size:13px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--verde-escuro)}
+#wgm .lead{font-size:19px; color:var(--muted); max-width:62ch}
+#wgm .btn{display:inline-flex; align-items:center; gap:8px; min-height:46px; padding:0 20px; border-radius:10px; font:600 16px/1 var(--f-body); text-decoration:none; border:1.5px solid var(--verde-escuro); color:var(--verde-escuro); background:transparent}
+#wgm .btn.primary{background:var(--verde-escuro); color:var(--bg)}
+#wgm .btn:focus-visible,#wgm a:focus-visible{outline:3px solid var(--verde); outline-offset:3px}
+#wgm .btn:hover{filter:brightness(1.06)}
+#wgm .logo{display:block; height:34px; width:123px}
+#wgm img{height:auto}
+#wgm .ph{background:var(--ph); color:var(--ink); padding:0 4px; border-radius:4px; font-weight:600}
+#wgm .hero .wrap{display:grid; grid-template-columns:minmax(0,5fr) minmax(0,7fr); gap:40px; align-items:center; padding-block:56px 40px}
+#wgm .hero .txt{display:flex; flex-direction:column; gap:20px}
+#wgm .hero .ctas{display:flex; flex-wrap:wrap; gap:12px; margin-top:6px}
+#wgm .hero figure{margin:0}
+#wgm .hero figure img{display:block; width:100%}
+#wgm .hero figcaption{font-size:13.5px; color:var(--muted); margin-top:8px; text-align:center}
+@media (max-width:900px){#wgm .hero .wrap{grid-template-columns:minmax(0,1fr); padding-block:36px 24px}}
+#wgm section{padding-block:64px}
+#wgm section.band{background:var(--erva)}
+#wgm .sec-h{display:flex; flex-direction:column; gap:12px; max-width:760px; margin-bottom:32px}
+#wgm .ad{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:20px}
+#wgm .ad figure{margin:0; display:flex; flex-direction:column; gap:10px}
+#wgm .ad img{width:100%; height:auto; border-radius:10px; border:1px solid var(--line); display:block}
+#wgm .ad .tag{font-size:13px; font-weight:700; letter-spacing:.12em; text-transform:uppercase}
+#wgm .ad .tag.antes{color:#9a3b1a}
+#wgm .pains{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:20px; margin-top:28px}
+#wgm .pains div{display:flex; flex-direction:column; gap:6px}
+#wgm .pains b{font-family:var(--f-display); font-weight:500; font-size:19px}
+#wgm .pains span{color:var(--muted); font-size:16px}
+@media (max-width:760px){#wgm .ad,#wgm .pains{grid-template-columns:minmax(0,1fr)}}
+#wgm .phones{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:28px}
+#wgm .phones figure{margin:0; display:flex; flex-direction:column; gap:14px}
+#wgm .phones .shot{border:9px solid #1d1f19; border-radius:30px; overflow:hidden; aspect-ratio:390/844; background:#fff; max-width:300px; width:100%; margin:0 auto}
+#wgm .phones .shot img{display:block; width:100%; height:auto}
+#wgm .phones figcaption{display:flex; flex-direction:column; gap:4px; max-width:300px; margin:0 auto; width:100%}
+#wgm .phones figcaption b{font-family:var(--f-display); font-weight:500; font-size:20px}
+#wgm .phones figcaption span{font-size:15.5px; color:var(--muted)}
+#wgm .more{display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:18px 28px; margin-top:40px; padding-top:28px; border-top:1px solid var(--line)}
+#wgm .more div{display:flex; flex-direction:column; gap:4px}
+#wgm .more b{font-weight:700; font-size:16px}
+#wgm .more span{font-size:15px; color:var(--muted)}
+@media (max-width:900px){#wgm .phones{grid-template-columns:minmax(0,1fr)}
+#wgm .more{grid-template-columns:repeat(2, minmax(0,1fr))}}
+@media (max-width:480px){#wgm .more{grid-template-columns:minmax(0,1fr)}}
+#wgm .ex{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:24px}
+#wgm .ex article{background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; display:flex; flex-direction:column}
+#wgm .ex .img{position:relative; aspect-ratio:16/10; overflow:hidden; border-bottom:1px solid var(--line); background:#e9ece2}
+#wgm .ex .img img{width:100%; height:100%; object-fit:cover; display:block}
+#wgm .ex .badge{position:absolute; left:12px; top:12px; background:rgba(35,38,30,.86); color:#fff; font:600 12.5px/1 var(--f-body); padding:6px 10px; border-radius:999px}
+#wgm .ex .body{padding:20px 22px 22px; display:flex; flex-direction:column; gap:12px; flex:1}
+#wgm .ex .body p{color:var(--muted); font-size:16px}
+#wgm .ex dl{display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:10px; margin:4px 0 6px}
+#wgm .ex dl div{display:flex; flex-direction:column}
+#wgm .ex dt{font-size:12.5px; color:var(--muted); order:2}
+#wgm .ex dd{margin:0; font-family:var(--f-display); font-size:24px; font-weight:500; font-variant-numeric:tabular-nums}
+#wgm .ex .body .btn{align-self:flex-start; margin-top:auto}
+#wgm .ex-note{margin-top:18px; font-size:14.5px; color:var(--muted); max-width:70ch}
+@media (max-width:860px){#wgm .ex{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:420px){#wgm .ex dl{grid-template-columns:repeat(2, minmax(0,1fr))}}
+#wgm .note{border:2px dashed var(--note-line); background:var(--note-bg); color:var(--note-ink); border-radius:10px; padding:12px 16px; font-size:15px; margin-bottom:28px}
+#wgm .eri{display:grid; grid-template-columns:minmax(0,6fr) minmax(0,5fr); gap:36px; align-items:center}
+#wgm .eri .txt{display:flex; flex-direction:column; gap:16px}
+#wgm .stats{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:16px 24px; margin-top:6px}
+#wgm .stats div{display:flex; flex-direction:column}
+#wgm .stats b{font-family:var(--f-display); font-size:36px; font-weight:500; line-height:1.05; font-variant-numeric:tabular-nums}
+#wgm .stats span{font-size:15px; color:var(--muted)}
+#wgm .eri video{width:100%; height:auto; border-radius:12px; display:block; background:#000; max-height:640px}
+@media (max-width:860px){#wgm .eri{grid-template-columns:minmax(0,1fr)}}
+#wgm .steps{display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:24px; list-style:none; margin:0; padding:0}
+#wgm .steps li{display:flex; flex-direction:column; gap:10px}
+#wgm .cnum{display:inline-grid; place-items:center; min-width:38px; height:34px; padding:0 10px; border-radius:7px; background:var(--verde-escuro); color:var(--bg); font:700 18px/1 var(--f-body); border:2px solid var(--bg); box-shadow:0 1px 3px rgba(0,0,0,.25); align-self:flex-start}
+#wgm .steps b{font-family:var(--f-display); font-weight:500; font-size:20px}
+#wgm .steps span{color:var(--muted); font-size:16px}
+#wgm .steps span.cnum{color:var(--bg); font-size:18px}
+#wgm .two{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:32px; margin-top:44px; padding-top:28px; border-top:1px solid var(--line)}
+#wgm .two div{display:flex; flex-direction:column; gap:8px}
+#wgm .two p{color:var(--muted)}
+@media (max-width:860px){#wgm .steps{grid-template-columns:repeat(2, minmax(0,1fr))}
+#wgm .two{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:480px){#wgm .steps{grid-template-columns:minmax(0,1fr)}}
+#wgm .cta{background:var(--noite); color:var(--on-noite)}
+#wgm .cta .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:24px; padding-block:56px}
+#wgm .cta h2{color:var(--on-noite)}
+#wgm .cta p{color:var(--on-noite-2); margin-top:10px; font-size:18px}
+#wgm .cta .who{font-size:18px; line-height:1.7}
+#wgm .cta .who .ph{color:#23261E}
+#wgm .ordem{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:22px}
+#wgm .ordem li{background:var(--card); border:1px solid var(--line); border-radius:12px; overflow:hidden; display:flex; flex-direction:column}
+#wgm .ordem img{display:block; width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; border-bottom:1px solid var(--line)}
+#wgm .ordem .t{padding:14px 16px 18px; display:flex; flex-direction:column; gap:8px}
+#wgm .ordem .h{display:flex; align-items:center; gap:10px}
+#wgm .ordem .cnum{min-width:30px; height:28px; padding:0 8px; font-size:15px; border-radius:6px}
+#wgm .ordem b{font-family:var(--f-display); font-weight:500; font-size:19px; line-height:1.2}
+#wgm .ordem i{width:11px; height:11px; border-radius:3px; flex:none; margin-left:auto}
+#wgm .ordem .d{font-size:15px; color:var(--muted)}
+#wgm .ordem li.extra{background:var(--erva); border-style:dashed; justify-content:center}
+#wgm .ordem li.extra .t{padding:22px 20px}
+@media (max-width:980px){#wgm .ordem{grid-template-columns:repeat(2, minmax(0,1fr))}}
+@media (max-width:460px){#wgm .ordem{grid-template-columns:minmax(0,1fr)}}
+#wgm{background:var(--bg);color:var(--ink);font:400 17px/1.55 var(--f-body);-webkit-font-smoothing:antialiased}
+#wgm *,#wgm *::before,#wgm *::after{box-sizing:border-box}
+#wgm h1,#wgm h2,#wgm h3{color:var(--ink);text-transform:none;font-style:normal;padding:0;border:0;background:none}
+#wgm p,#wgm figure,#wgm dl,#wgm dd,#wgm ol,#wgm ul,#wgm li{margin:0;padding:0}
+#wgm ol,#wgm ul{list-style:none}
+#wgm li::before,#wgm li::marker{content:none}
+#wgm img{max-width:100%;border-radius:0;box-shadow:none}
+#wgm a{transition:none}
+#wgm section{margin:0}
+#wgm .band,#wgm .cta{box-shadow:0 0 0 100vmax var(--bandc);clip-path:inset(0 -100vmax)}
+#wgm .band{--bandc:var(--erva)} #wgm .cta{--bandc:var(--noite)}
+#wgm .cta .btn{border-color:var(--on-noite);color:var(--on-noite)}
+#wgm .cta .btn.primary{background:var(--on-noite);color:var(--noite)}
+#wgm .two.one{grid-template-columns:minmax(0,1fr)}
+#wgm .two.one p{max-width:70ch}
+</style>
+<div id="wgm" class="wgm">
+  <div class="hero">
+    <div class="wrap">
+      <div class="txt">
+        <span class="eyebrow">Mapas de obra · arranjos exteriores</span>
+        <h1>Toda a obra no mesmo mapa</h1>
+        <p class="lead">Passamos o projeto de execução para um mapa interativo que a equipa usa no terreno. Terras e camadas, drenagem, rega, pavimentos, plantação, mobiliário e iluminação: cada especialidade é uma camada que se liga e desliga, com as quantidades medidas no desenho.</p>
+        <p class="lead" style="font-size:17px">No telemóvel, no tablet e no computador. Sem instalar nada e a funcionar sem rede.</p>
+        <div class="ctas">
+          <a class="btn primary" href="#exemplos">Abrir uma obra de exemplo</a>
+          <a class="btn" href="https://wegarden.pt/contactos/">Pedir uma demonstração</a>
+        </div>
+      </div>
+      <figure>
+        <img src="https://patr0cini.github.io/wegarden-mapas-exemplos/img/hero-dispositivos.webp" width="1569" height="1000" alt="O mesmo tipo de mapa em três aparelhos. No portátil, os jardins de um hotel com a rede de rega, os pavimentos, o mobiliário e a iluminação, e a lista da rega com as quantidades. No tablet, uma cobertura verde com o perfil das camadas de uma zona. No telemóvel, a ficha de uma caleira de drenagem.">
+        <figcaption>Obras de demonstração: jardins de um hotel e cobertura verde de um edifício de escritórios.</figcaption>
+      </figure>
+    </div>
+  </div>
+  <section class="band" aria-labelledby="h-ad">
+    <div class="wrap">
+      <div class="sec-h">
+        <span class="eyebrow">Do projeto à obra</span>
+        <h2 id="h-ad">Seis folhas de projeto, um só mapa</h2>
+        <p class="lead">No projeto de execução, cada especialidade vem na sua folha, com a sua legenda. No mapa ficam todas no mesmo sítio e à mesma escala, e cada equipa liga as camadas de que precisa.</p>
+      </div>
+      <div class="ad">
+        <figure><span class="tag antes">No papel: uma folha por especialidade</span><img src="https://patr0cini.github.io/wegarden-mapas-exemplos/img/antes-folhas.jpg" width="1200" height="900" alt="Seis folhas a preto e branco do mesmo jardim: terras e camadas, drenagem, rega, pavimentos, plantação, e mobiliário e iluminação."></figure>
+        <figure><span class="tag">No mapa: todas as camadas juntas</span><img src="https://patr0cini.github.io/wegarden-mapas-exemplos/img/depois-mapa.jpg" width="1200" height="900" alt="O mesmo jardim no mapa interativo, com a drenagem, a rega, os pavimentos, a plantação, o mobiliário e a iluminação sobrepostos, cada um com a sua cor."></figure>
+      </div>
+      <div class="pains">
+        <div><b>Cruzar especialidades</b><span>Por onde passa o coletor? Que pavimento leva por cima? Ligam-se as duas camadas e vê-se no sítio.</span></div>
+        <div><b>Saber quanto leva a obra</b><span>Unidades, metros, m² e m³ de cada especialidade, medidos no desenho e exportados numa só lista.</span></div>
+        <div><b>Saber o que é cada coisa</b><span>Toca-se num ralo, num candeeiro ou numa árvore e aparece a ficha, com o código do projeto.</span></div>
+      </div>
+    </div>
+  </section>
+  <section id="especialidades" aria-labelledby="h-esp">
+    <div class="wrap">
+      <div class="sec-h">
+        <span class="eyebrow">Especialidades</span>
+        <h2 id="h-esp">Uma camada por especialidade, pela ordem da obra</h2>
+        <p class="lead">Do que fica debaixo do chão ao que se vê no fim. Cada camada traz a legenda do projeto e as quantidades de cada tipo.</p>
+      </div>
+      <ol class="ordem">
+        <li><img src="https://patr0cini.github.io/wegarden-mapas-exemplos/img/ordem-sub.jpg" width="720" height="540" alt="Mapa do hotel só com a camada de terras: canteiros, relvado e floreiras com tramas diferentes." loading="lazy"><div class="t"><div class="h"><span class="cnum">1</span><b>Terras e camadas</b><i style="background:#795548"></i></div><span class="d">Terra vegetal, substratos e camadas de cobertura, com o perfil de cada zona, espessuras, volumes e carga sobre a laje.</span></div></li>
+        <li><img src="https://patr0cini.github.io/wegarden-mapas-exemplos/img/ordem-dre.jpg" width="720" height="540" alt="Mapa do hotel só com a drenagem: caleiras, coletores, drenos, sumidouros, pendentes e cotas." loading="lazy"><div class="t"><div class="h"><span class="cnum">2</span><b>Drenagem</b><i style="background:#00838f"></i></div><span class="d">Sumidouros, caleiras, coletores, drenos, pendentes e cotas de acabamento.</span></div></li>
+        <li><img src="https://patr0cini.github.io/wegarden-mapas-exemplos/img/ordem-rega.jpg" width="720" height="540" alt="Mapa do hotel só com a rega: setores, tubagem, aspersores com o alcance, eletroválvulas e programador." loading="lazy"><div class="t"><div class="h"><span class="cnum">3</span><b>Rega</b><i style="background:#1565c0"></i></div><span class="d">Rede principal e secundária, setores, eletroválvulas, aspersores, gotejadores e programador.</span></div></li>
+        <li><img src="https://patr0cini.github.io/wegarden-mapas-exemplos/img/ordem-pav.jpg" width="720" height="540" alt="Mapa do hotel só com os pavimentos: lajeado, saibro, deck, betuminoso, grelha de enrelvamento e lancis." loading="lazy"><div class="t"><div class="h"><span class="cnum">4</span><b>Pavimentos e revestimentos</b><i style="background:#a1887f"></i></div><span class="d">Área de cada pavimento e revestimento; lancis, guias e remates em metros.</span></div></li>
+        <li><img src="https://patr0cini.github.io/wegarden-mapas-exemplos/img/ordem-plant.jpg" width="720" height="540" alt="Mapa do hotel só com a plantação: manchas de herbáceas e arbustos a cores, árvores e canteiros numerados." loading="lazy"><div class="t"><div class="h"><span class="cnum">5</span><b>Plantação</b><i style="background:#5e8e1f"></i></div><span class="d">Espécies, compassos, manchas e quantidades, organizadas por canteiro.</span></div></li>
+        <li><img src="https://patr0cini.github.io/wegarden-mapas-exemplos/img/ordem-mob.jpg" width="720" height="540" alt="Mapa do hotel só com o mobiliário: bancos, espreguiçadeiras, mesas, guarda-sóis e papeleiras." loading="lazy"><div class="t"><div class="h"><span class="cnum">6</span><b>Mobiliário</b><i style="background:#6d4c41"></i></div><span class="d">Bancos, mesas, papeleiras e restantes peças, cada uma no sítio e contadas.</span></div></li>
+        <li><img src="https://patr0cini.github.io/wegarden-mapas-exemplos/img/ordem-ilu.jpg" width="720" height="540" alt="Mapa do hotel só com a iluminação: candeeiros, balizadores, projetores, quadro e circuitos." loading="lazy"><div class="t"><div class="h"><span class="cnum">7</span><b>Iluminação</b><i style="background:#f9a825"></i></div><span class="d">Candeeiros, balizadores, projetores, quadro e circuitos.</span></div></li>
+        <li class="extra"><div class="t"><b>E o resto do projeto</b><span class="d">Muros, vedações, equipamentos de jogo, sinalética ou redes enterradas: o que o projeto tiver entra como mais uma camada, com a sua legenda e as suas quantidades.</span></div></li>
+      </ol>
+    </div>
+  </section>
+  <section class="band" aria-labelledby="h-func">
+    <div class="wrap">
+      <div class="sec-h">
+        <span class="eyebrow">Funcionalidades</span>
+        <h2 id="h-func">O que a equipa tem na mão</h2>
+      </div>
+      <div class="phones">
+        <figure>
+          <div class="shot"><img src="https://patr0cini.github.io/wegarden-mapas-exemplos/img/f-ficha.jpg" width="585" height="1266" alt="Ficha de um candeeiro de pé no telemóvel: designação, código L1, circuito e total na obra." loading="lazy"></div>
+          <figcaption><b>Ficha de cada elemento</b><span>Toca-se num elemento e aparece o que é: designação, código do projeto, medida, local e total na obra. «Destacar» mostra todos os do mesmo tipo.</span></figcaption>
+        </figure>
+        <figure>
+          <div class="shot"><img src="https://patr0cini.github.io/wegarden-mapas-exemplos/img/f-perfil.jpg" width="585" height="1266" alt="Ficha de uma zona de canteiros com o perfil das camadas: casca de pinheiro, terra vegetal e solo escarificado, com as espessuras e o volume." loading="lazy"></div>
+          <figcaption><b>Perfil das camadas</b><span>Em cada zona, as camadas de cima para baixo, as espessuras e o volume de terra ou de substrato.</span></figcaption>
+        </figure>
+        <figure>
+          <div class="shot"><img src="https://patr0cini.github.io/wegarden-mapas-exemplos/img/f-quant.jpg" width="585" height="1266" alt="Separador Camadas no telemóvel, com as quantidades de terras e de drenagem: m², m³, metros e unidades." loading="lazy"></div>
+          <figcaption><b>Quantidades de cada camada</b><span>Unidades, metros, m² e m³ de cada tipo, contados no desenho. Exportam-se para Excel, para o orçamento e as encomendas.</span></figcaption>
+        </figure>
+      </div>
+      <div class="more">
+        <div><b>Onde estou</b><span>Posição GPS no mapa e «Guiar até aqui» para chegar a um elemento.</span></div>
+        <div><b>Medir no mapa</b><span>Distâncias entre dois pontos quaisquer, sem fita métrica.</span></div>
+        <div><b>Registo da plantação</b><span>A equipa marca o que já plantou e o mapa mostra o que falta, por espécie e por canteiro.</span></div>
+        <div><b>Modo sol</b><span>Alto contraste, para ler o ecrã ao sol.</span></div>
+      </div>
+    </div>
+  </section>
+<section id="exemplos" aria-labelledby="h-ex">
+    <div class="wrap">
+      <div class="sec-h">
+        <span class="eyebrow">Experimente</span>
+        <h2 id="h-ex">Abra uma obra de exemplo</h2>
+        <p class="lead">Estas duas obras não existem: foram desenhadas pela We Garden para mostrar a ferramenta, com todas as especialidades. Abra o mapa e use-o como se estivesse na obra.</p>
+      </div>
+      <div class="ex">
+        <article>
+          <div class="img"><img src="https://patr0cini.github.io/wegarden-mapas-exemplos/img/ex-hotel.jpg" width="1280" height="800" alt="Mapa de demonstração dos jardins de um hotel, no computador, com os pavimentos, a plantação, o mobiliário e a iluminação ligados e a lista de camadas ao lado." loading="lazy"><span class="badge">Exemplo · obra fictícia</span></div>
+          <div class="body">
+            <h3>Jardins de um hotel</h3>
+            <p>Cerca de 2,5 ha: arruamento e estacionamento, rotunda, terraço e piscina, jardim mediterrânico, relvado com sobreiros e sebes no limite. Com terras, drenagem, rega por setores, pavimentos, plantação, mobiliário e iluminação.</p>
+            <dl>
+              <div><dd>3 980 m²</dd><dt>de pavimentos</dt></div>
+              <div><dd>947 m</dd><dt>de drenagem</dt></div>
+              <div><dd>28</dd><dt>aspersores</dt></div>
+              <div><dd>229</dd><dt>árvores e arbustos</dt></div>
+            </dl>
+            <a class="btn primary" href="https://patr0cini.github.io/wegarden-mapas-exemplos/exemplo-jardim-hotel.html" target="_blank" rel="noopener">Abrir o mapa ↗</a>
+          </div>
+        </article>
+        <article>
+          <div class="img"><img src="https://patr0cini.github.io/wegarden-mapas-exemplos/img/ex-cobertura.jpg" width="1280" height="800" alt="Mapa de demonstração de uma cobertura verde, no computador, com o deck, os módulos de vegetação, as floreiras, o mobiliário e a iluminação, e a lista de camadas ao lado." loading="lazy"><span class="badge">Exemplo · obra fictícia</span></div>
+          <div class="body">
+            <h3>Cobertura verde de um edifício de escritórios</h3>
+            <p>Cerca de 5 100 m² de cobertura: vegetação extensiva em módulos de 3 × 3 m, prado de aromáticas, floreiras com oliveiras e esplanada em deck. Com o perfil das camadas de cada zona, drenagem, rega, pavimentos, plantação, mobiliário e iluminação.</p>
+            <dl>
+              <div><dd>2 804 m²</dd><dt>de cobertura verde</dt></div>
+              <div><dd>457 m³</dd><dt>de substrato</dt></div>
+              <div><dd>11</dd><dt>ralos</dt></div>
+              <div><dd>204</dd><dt>módulos</dt></div>
+            </dl>
+            <a class="btn primary" href="https://patr0cini.github.io/wegarden-mapas-exemplos/exemplo-cobertura-verde.html" target="_blank" rel="noopener">Abrir o mapa ↗</a>
+          </div>
+        </article>
+      </div>
+      <p class="ex-note">Nos exemplos, alguns canteiros já vêm marcados como plantados. O que marcar fica guardado só no seu aparelho. Fotografias das espécies: Flora-On, CC BY-NC 4.0.</p>
+    </div>
+  </section>
+  <section id="como-funciona" aria-labelledby="h-cf">
+    <div class="wrap">
+      <div class="sec-h">
+        <span class="eyebrow">Como funciona</span>
+        <h2 id="h-cf">Do projeto ao mapa da obra</h2>
+      </div>
+      <ol class="steps">
+        <li><span class="cnum">1</span><b>Envia-nos o projeto</b><span>O DWG e os PDF do projeto de execução, de todas as especialidades, com as legendas e os mapas de quantidades.</span></li>
+        <li><span class="cnum">2</span><b>Conferimos o desenho</b><span>Contagens, áreas, comprimentos e volumes de cada especialidade. Devolvemos a lista de pontos a confirmar com o projetista.</span></li>
+        <li><span class="cnum">3</span><b>Entregamos o mapa</b><span>Num endereço próprio da obra, pronto para telemóvel, tablet e computador.</span></li>
+        <li><span class="cnum">4</span><b>Acompanhamos a obra</b><span>Alterações de projeto e substituições entram no mapa, em todas as camadas.</span></li>
+      </ol>
+      <div class="two one">
+        <div><h3>Para quem</h3><p>Gabinetes de arquitetura paisagista e de arquitetura, empresas de engenharia, empreiteiros e fiscalização de obras de arranjos exteriores, coberturas verdes e espaços públicos.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cta" id="contacto" aria-labelledby="h-ct" style="padding-block:0">
+    <div class="wrap">
+      <div>
+        <h2 id="h-ct">Peça uma demonstração</h2>
+        <p>Mostramos como fica o mapa com um projeto seu.</p>
+      </div>
+      <div><a class="btn primary" href="https://wegarden.pt/contactos/">Contactar a We Garden</a></div>
+    </div>
+  </section>
+</div>
